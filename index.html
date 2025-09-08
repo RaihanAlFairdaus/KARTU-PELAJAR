@@ -3,42 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Data Diri</title>
-  <!-- Hubungkan ke file CSS -->
+  <title>Kartu Pelajar Icikiwir</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h2>Isi Data Diri</h2>
-    <form id="dataForm">
-      <label for="nama">Nama:</label>
-      <input type="text" id="nama" required>
+    <h2>Buat Kartu Pelajar</h2>
+    <form id="ktpForm">
+      <label for="foto">Upload Foto:</label>
+      <input type="file" id="foto" accept="image/*" required>
 
-      <label for="sekolah">Sekolah:</label>
-      <input type="text" id="sekolah" required>
+      <label for="name">Nama:</label>
+      <input type="text" id="name" required>
 
-      <label for="hobi">Hobi:</label>
-      <input type="text" id="hobi" required>
+      <label for="birthday">Tanggal Lahir:</label>
+      <input type="date" id="birthday" required>
 
-      <label for="anime">Anime Favorit:</label>
-      <input type="text" id="anime" required>
+      <label for="constellation">Zodiak:</label>
+      <input type="text" id="constellation" required>
 
-      <button type="submit">Kirim</button>
+      <label for="class">Kelas:</label>
+      <input type="text" id="class" required>
+
+      <button type="submit">Buat Kartu</button>
     </form>
-    <div class="thanks" id="thanksMsg">
-      🎉 Terimakasih sudah mengisi 😁😁
+
+    <div class="ktp-card" id="ktpCard">
+      <div class="school-name">Icikiwir School</div>
+      <img id="fotoPreview" src="" alt="Foto" />
+      <div class="info">
+        <p><strong>Nama:</strong> <span id="nameCard"></span></p>
+        <p><strong>Tanggal Lahir:</strong> <span id="birthdayCard"></span></p>
+        <p><strong>Zodiak:</strong> <span id="constellationCard"></span></p>
+        <p><strong>Kelas:</strong> <span id="classCard"></span></p>
+      </div>
     </div>
   </div>
 
-  <script>
-    const form = document.getElementById('dataForm');
-    const thanksMsg = document.getElementById('thanksMsg');
-
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      form.style.display = 'none';
-      thanksMsg.style.display = 'block';
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
-</html>
+  </html>
