@@ -3,78 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Percobaan</title>
-  <style>
-    /* CSS ditaruh di sini */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f9;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #3498db;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 4px solid #2980b9;
-    }
-
-    main {
-      padding: 20px;
-      display: grid;
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: scale(1.02);
-    }
-
-    footer {
-      margin-top: 30px;
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
-    }
-  </style>
+  <title>Form Data Diri</title>
+  <!-- Hubungkan ke file CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Selamat Datang di Web Percobaan</h1>
-    <p>Website ini dibuat untuk latihan GitHub Pages</p>
-  </header>
+  <div class="container">
+    <h2>Isi Data Diri</h2>
+    <form id="dataForm">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" required>
 
-  <main>
-    <section class="card">
-      <h2>Profil Singkat</h2>
-      <p>Halo, saya sedang belajar membuat website menggunakan GitHub Pages.</p>
-    </section>
+      <label for="sekolah">Sekolah:</label>
+      <input type="text" id="sekolah" required>
 
-    <section class="card">
-      <h2>Kontak</h2>
-      <p>Email: contoh@email.com</p>
-    </section>
-  </main>
+      <label for="hobi">Hobi:</label>
+      <input type="text" id="hobi" required>
 
-  <footer>
-    <p>&copy; 2025 Web Percobaan</p>
-  </footer>
+      <label for="anime">Anime Favorit:</label>
+      <input type="text" id="anime" required>
+
+      <button type="submit">Kirim</button>
+    </form>
+    <div class="thanks" id="thanksMsg">
+      🎉 Terimakasih sudah mengisi 😁😁
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('dataForm');
+    const thanksMsg = document.getElementById('thanksMsg');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      form.style.display = 'none';
+      thanksMsg.style.display = 'block';
+    });
+  </script>
 </body>
-  </html>
+</html>
