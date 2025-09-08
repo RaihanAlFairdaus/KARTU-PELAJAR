@@ -7,22 +7,40 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>AI by Rehan</h1>
-</header>
-<main>
-  <section class="hero">
-    <h2>Welcome to AI by Rehan</h2>
-    <p>Ajukan pertanyaanmu, AI akan menjawab!</p>
-  </section>
-  <div class="chat-container">
-    <div class="chat-log" id="chatLog"></div>
-    <div class="chat-input">
-      <input type="text" id="chatInput" placeholder="Tulis pertanyaan...">
-      <button id="sendBtn">Kirim</button>
+
+<header class="nav">
+  <div class="brand">
+    <div class="logo">AI</div>
+    <div>
+      <div style="font-weight:700">AI by Rehan</div>
+      <small class="muted">All-in-one demo</small>
     </div>
   </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="wrap">
+      <h1>Welcome to <span class="typing" id="typing"></span></h1>
+      <p class="lead muted">Tanya AI langsung, lihat jawabannya di bawah!</p>
+    </div>
+  </section>
+
+  <!-- CHAT AI -->
+  <section id="tools" class="fade-in" style="margin-top:20px">
+    <div class="card fade-in">
+      <h3>🤖 AI Chat</h3>
+      <div class="muted">Tanya AI langsung di sini</div>
+      <div class="chat-log" id="chatLog"></div>
+      <div class="row chat-input">
+        <input type="text" id="chatInput" placeholder="Tulis pertanyaan...">
+        <button class="btn" id="sendBtn">Kirim</button>
+      </div>
+    </div>
+  </section>
 </main>
+
 <script src="app.js"></script>
 </body>
   </html>
