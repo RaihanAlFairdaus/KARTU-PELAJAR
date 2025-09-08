@@ -1,88 +1,22 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  margin: 0;
-  padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: yellow;
+    font-family: Arial, sans-serif;
 }
 
-.container {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  width: 360px;
+h1 {
+    margin: 20px 0;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #1e3c72;
+#game-container {
+    position: relative;
 }
 
-label {
-  display: block;
-  margin-top: 12px;
-  font-weight: 600;
-  color: #333;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 14px;
-}
-
-button {
-  margin-top: 20px;
-  width: 100%;
-  padding: 12px;
-  background: #1e3c72;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background: #39599f;
-}
-
-.ktp-card {
-  display: none;
-  margin-top: 30px;
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  padding: 20px;
-  text-align: left;
-  position: relative;
-}
-
-.ktp-card .school-name {
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 12px;
-  color: #1e3c72;
-}
-
-.ktp-card img {
-  width: 100px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-  float: right;
-}
-
-.ktp-card .info {
-  font-size: 14px;
-  line-height: 1.5;
+canvas {
+    background-color: black;
+    display: block;
+    border: 3px solid yellow;
 }
