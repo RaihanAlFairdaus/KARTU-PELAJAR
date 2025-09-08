@@ -1,16 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pac-Man Game</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI by Rehan</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Pac-Man</h1>
-    <div id="game-container">
-        <canvas id="gameCanvas" width="560" height="620"></canvas>
+  <!-- Splash Screen -->
+  <div id="splash-screen">
+    <h1>Welcome to AI by Rehan</h1>
+    <button onclick="startApp()">Mulai</button>
+  </div>
+
+  <!-- Main App -->
+  <div id="app" class="hidden">
+    <div id="chat-container">
+      <div id="messages"></div>
+      <input type="text" id="userInput" placeholder="Tulis pesan...">
+      <button onclick="sendMessage()">Kirim</button>
     </div>
-    <script src="game.js"></script>
+
+    <div id="tools">
+      <button onclick="toggleCalculator()">Kalkulator</button>
+      <button onclick="toggleMode()">Mode Gelap/Terang</button>
+      <button onclick="generateImage()">Buat Gambar</button>
+      <button onclick="translateText()">Translate</button>
+      <input type="file" id="fileUpload" onchange="uploadFile(event)">
+    </div>
+
+    <div id="calculator" class="hidden">
+      <input type="text" id="calcInput" placeholder="Ketik rumus, misal 5+5">
+      <button onclick="calculate()">Hitung</button>
+      <div id="calcResult"></div>
+    </div>
+
+    <div id="imageOutput" class="hidden"></div>
+  </div>
+
+<script src="js/storage.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/translate.js"></script>
+<script src="js/imageGen.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/main.js"></script>
 </body>
-</html>
+      </html>
